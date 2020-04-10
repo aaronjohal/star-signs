@@ -75,12 +75,11 @@ class profileVC: UIViewController, UITextFieldDelegate {
         if let name = nameField.text, let dOB = dateTxtField.text { //if name is not nil
             user.name = name
             user.dob = dOB
-            print(user.dob)
             
         }
         
-     performSegue(withIdentifier: "resultsVCSegue", sender: self)
-       //calcStarSign(user: user)
+      performSegue(withIdentifier: "resultsVCSegue", sender: self)
+
     }
     
     
