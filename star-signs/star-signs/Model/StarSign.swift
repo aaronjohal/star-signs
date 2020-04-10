@@ -13,11 +13,14 @@ class StarSign {
     var name: String! //Aries
     var symbol: String? //possibly a jpg url
     var backgroundInfo: String! //this personality is etc...
-    var date: String! //date range
+    var startDate: String! //date range
+    var endDate: String!
     
-    init(name: String, symbol: String, backgroundInfo: String) {
+    init(name: String, startDate: String, endDate: String) {
         
         self.name = name
+        self.startDate = startDate
+        self.endDate = endDate
         
     }
     

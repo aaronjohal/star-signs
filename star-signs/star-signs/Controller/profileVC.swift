@@ -13,14 +13,12 @@ class profileVC: UIViewController, UITextFieldDelegate {
     var user: User!
     var datePicker : UIDatePicker!
     
-    var starSign: StarSign? //test***
+    //var starSign: StarSign? //test***
     
     
     
     @IBOutlet weak var nameField: UITextField!
     @IBOutlet weak var dateTxtField: UITextField!
-    
-
     
 
     override func viewDidLoad() {
@@ -35,8 +33,7 @@ class profileVC: UIViewController, UITextFieldDelegate {
         datePicker.addTarget(self, action: #selector(profileVC.dateChanged(datePicker:)), for: .valueChanged)
         dateTxtField.inputView = datePicker
         
-        
-        starSign = StarSign(name: "Pisces" , symbol: "1", backgroundInfo: "cool") //test ***
+    
        
     }
     
@@ -58,9 +55,11 @@ class profileVC: UIViewController, UITextFieldDelegate {
     }
     
     
+    /** set the date from the datePicker in the UI text field*/
+    
     @objc func dateChanged(datePicker: UIDatePicker){
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "dd/MM" //will need to extract the date and the month from this
+        dateFormatter.dateFormat =  "dd/MM" //will need to extract the date and the month from this
         
         dateTxtField.text = dateFormatter.string(from: datePicker.date)
         view.endEditing(true) //dismiss the datePicker
@@ -76,37 +75,25 @@ class profileVC: UIViewController, UITextFieldDelegate {
         if let name = nameField.text, let dOB = dateTxtField.text { //if name is not nil
             user.name = name
             user.dob = dOB
+            print(user.dob)
             
         }
         
-        calcStarSign(user: user)
-      
+     performSegue(withIdentifier: "resultsVCSegue", sender: self)
+       //calcStarSign(user: user)
+    }
+    
+    
+    /** prepare and send the objects/data to the next storyboard segue */
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let resultsVC = segue.destination as? resultsVC {
+            resultsVC.user = user
+
+        }
     }
 
   
-   /** Determines a users star sign based on their dob*/
-    
-    func calcStarSign(user: User){
-        
-       let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "dd/MM"
-        let startDate = "19/02"
-        let endDate = "21/03"
-        
-        
-        if let usersDOB = dateFormatter.date(from: user.dob){
-            if let startRange = dateFormatter.date(from: startDate), let endRange = dateFormatter.date(from: endDate){
-                if( usersDOB.isBetween(startRange, and: endRange)){
-                    print("you are a pisces!")
-                } else {
-                    print("you are not pisces!")
-                }
-            }
-           
-        }
-
-//
-    }
+   
     
     
     }

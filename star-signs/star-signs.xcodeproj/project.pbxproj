@@ -14,10 +14,11 @@
 		B40DB9D0243F39C300504B05 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B40DB9CF243F39C300504B05 /* Assets.xcassets */; };
 		B40DB9D3243F39C300504B05 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B40DB9D1243F39C300504B05 /* LaunchScreen.storyboard */; };
 		B40DB9DC243F3EA400504B05 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40DB9DB243F3EA400504B05 /* CustomButton.swift */; };
+		B428569C24407A1F00CD6FD1 /* resultsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B428569B24407A1F00CD6FD1 /* resultsVC.swift */; };
+		B428569E24407C8400CD6FD1 /* dateInRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = B428569D24407C8400CD6FD1 /* dateInRange.swift */; };
 		B4479107243F4A3300427A65 /* profileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4479106243F4A3300427A65 /* profileVC.swift */; };
 		B447910A243F682600427A65 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4479109243F682600427A65 /* User.swift */; };
 		B46B7017243FA5700073E97D /* StarSign.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46B7016243FA5700073E97D /* StarSign.swift */; };
-		B46B701B243FB01B0073E97D /* starDates.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46B701A243FB01B0073E97D /* starDates.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,10 +31,11 @@
 		B40DB9D2243F39C300504B05 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B40DB9D4243F39C300504B05 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B40DB9DB243F3EA400504B05 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		B428569B24407A1F00CD6FD1 /* resultsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = resultsVC.swift; sourceTree = "<group>"; };
+		B428569D24407C8400CD6FD1 /* dateInRange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dateInRange.swift; sourceTree = "<group>"; };
 		B4479106243F4A3300427A65 /* profileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = profileVC.swift; sourceTree = "<group>"; };
 		B4479109243F682600427A65 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		B46B7016243FA5700073E97D /* StarSign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarSign.swift; sourceTree = "<group>"; };
-		B46B701A243FB01B0073E97D /* starDates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = starDates.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +95,7 @@
 			children = (
 				B40DB9CA243F39C200504B05 /* WelcomeVC.swift */,
 				B4479106243F4A3300427A65 /* profileVC.swift */,
+				B428569B24407A1F00CD6FD1 /* resultsVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -109,7 +112,7 @@
 		B46B701C243FB0470073E97D /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				B46B701A243FB01B0073E97D /* starDates.swift */,
+				B428569D24407C8400CD6FD1 /* dateInRange.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -189,8 +192,9 @@
 				B40DB9CB243F39C200504B05 /* WelcomeVC.swift in Sources */,
 				B447910A243F682600427A65 /* User.swift in Sources */,
 				B40DB9C7243F39C200504B05 /* AppDelegate.swift in Sources */,
+				B428569E24407C8400CD6FD1 /* dateInRange.swift in Sources */,
+				B428569C24407A1F00CD6FD1 /* resultsVC.swift in Sources */,
 				B40DB9C9243F39C200504B05 /* SceneDelegate.swift in Sources */,
-				B46B701B243FB01B0073E97D /* starDates.swift in Sources */,
 				B46B7017243FA5700073E97D /* StarSign.swift in Sources */,
 				B4479107243F4A3300427A65 /* profileVC.swift in Sources */,
 			);
