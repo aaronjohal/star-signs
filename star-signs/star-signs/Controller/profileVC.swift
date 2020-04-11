@@ -13,10 +13,8 @@ class profileVC: UIViewController, UITextFieldDelegate {
     var user: User!
     var datePicker : UIDatePicker!
     
-    //var starSign: StarSign? //test***
-    
-    
-    
+   
+
     @IBOutlet weak var nameField: UITextField!
     @IBOutlet weak var dateTxtField: UITextField!
     
@@ -64,23 +62,52 @@ class profileVC: UIViewController, UITextFieldDelegate {
         dateTxtField.text = dateFormatter.string(from: datePicker.date)
         view.endEditing(true) //dismiss the datePicker
         
-        //if i store the date from the first date formatter and then create a second one to just show in the textfield that would be good
-    
-     
+
         
     }
     
 
     @IBAction func confirmPressed(_ sender: Any) {
         if let name = nameField.text, let dOB = dateTxtField.text { //if name is not nil
-            user.name = name
-            user.dob = dOB
+           // user.name = name
+            //user.dob = dOB
             
+            saveUserProfile(name: name, dob: dOB)
         }
+        
+    
         
       performSegue(withIdentifier: "resultsVCSegue", sender: self)
 
     }
+    
+    
+    /** Save the users profile with the name and DOB*/
+    func saveUserProfile(name: String, dob: String){
+        
+       
+        
+      let dateFormatter = DateFormatter()
+         dateFormatter.dateFormat =  "dd/MM"
+        
+        if let date = dateFormatter.date(from: dob) {
+            dateFormatter.dateFormat = "MM"
+            let month = Int(dateFormatter.string(from: date))!
+              dateFormatter.dateFormat = "dd"
+            let day = Int(dateFormatter.string(from: date))!
+            
+
+            user.dOB = (day: day, month: month)
+       
+        }
+        user.name = name
+       
+            
+            
+        
+    }
+    
+    
     
     
     /** prepare and send the objects/data to the next storyboard segue */
@@ -90,9 +117,6 @@ class profileVC: UIViewController, UITextFieldDelegate {
 
         }
     }
-
-  
-   
     
     
     }

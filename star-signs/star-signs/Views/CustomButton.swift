@@ -25,7 +25,7 @@ class CustomButton: UIButton {
     }
     
     func customStyling (){
-        backgroundColor = #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
+        backgroundColor = .black
         layer.borderWidth = 2.0
         layer.borderColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
         layer.cornerRadius = 5.0

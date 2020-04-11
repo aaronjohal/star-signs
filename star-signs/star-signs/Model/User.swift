@@ -11,11 +11,16 @@ import Foundation
 class User {
     
     
-    var name = ""
-    var dob = ""
-    var starSign: StarSign!
+    var name : String!
+    var dob : String!
+    var starSign: String!
+    var dOB: (day: Int, month: Int)!
+    var imageURL: String!
+    
+
     
     
+ 
     
     
 }
