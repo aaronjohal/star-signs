@@ -19,8 +19,9 @@ class resultsVC: UIViewController {
     @IBOutlet weak var starSignLbl: UILabel!
     
     @IBOutlet weak var starSignImg: UIImageView!
+    @IBOutlet weak var dateRngLbl: UILabel!
+    @IBOutlet weak var starBioLbl: UILabel!
     
-
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -60,35 +61,35 @@ class resultsVC: UIViewController {
                return "Leo"
                 
             case (23...31, 08), (01...22,09):
-                print("Virgo") //(August 23-September 22)
+                 //(August 23-September 22)
                return "Virgo"
                 
             case (23...30, 09), (01...22,10):
-                print("Libra") //(September 23-October 22)
+               //(September 23-October 22)
                return "Libra"
                 
             case (23...31, 10), (01...21,11):
-                print("Scorpio") //(October 23-November 21)
+                //(October 23-November 21)
                return "Scorpio"
                 
             case (22...30, 11), (01...21,12):
-                print("Sagittarius") //(November 22-December 21)
+                //(November 22-December 21)
                 return "Sagittarius"
                 
             case (22...31, 12), (01...19,01):
-                print("Capricorn") //(December 22-January 19)
+                //(December 22-January 19)
                 return "Capricorn"
                 
             case (20...31, 01), (01...18,02):
-                print("Aquarius") // (January 20-February 18)
+               // (January 20-February 18)
                 return "Aquarius"
                 
             case (19...29, 02), (01...20,03):
-                print("Pisces") // (February 19-March 20)
+               // (February 19-March 20)
                 return "Pisces"
                 
             default:
-                print ("no star sign")
+                
                 return "None"
                // return "You do not have a star sign!"
                 
@@ -100,8 +101,14 @@ class resultsVC: UIViewController {
     
     func displayStarSign(starSign: StarSign){
         
+        starSignLbl.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
         starSignLbl.text = starSign.name
         starSignImg.image = UIImage (named: starSign.getImage())
+        dateRngLbl.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+        dateRngLbl.text = starSign.getDate()
+        starBioLbl.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+        starBioLbl.text = starSign.getBio()
+    
     
     }
 

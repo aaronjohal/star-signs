@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <device id="ipad12_9" orientation="portrait" layout="fullscreen" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -12,20 +12,20 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="WelcomeVC" customModule="star_signs" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="astrologyBG" translatesAutoresizingMaskIntoConstraints="NO" id="qcN-Nk-Zjd">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="universeBG" translatesAutoresizingMaskIntoConstraints="NO" id="qcN-Nk-Zjd">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What is My Zodiac?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="417-2I-MoW">
-                                <rect key="frame" x="36" y="50" width="303" height="46"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Star Sign" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="417-2I-MoW">
+                                <rect key="frame" x="80.5" y="70" width="863" height="46"/>
                                 <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="33"/>
-                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k0f-lP-Xlz" customClass="CustomButton" customModule="star_signs" customModuleProvider="target">
-                                <rect key="frame" x="20" y="600" width="335" height="47"/>
+                                <rect key="frame" x="20" y="1299" width="984" height="47"/>
                                 <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="25"/>
                                 <state key="normal" title="Next">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -37,12 +37,13 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="417-2I-MoW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0XZ-fR-WCH"/>
+                            <constraint firstItem="417-2I-MoW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="80.5" id="2y7-9x-kex"/>
+                            <constraint firstItem="417-2I-MoW" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="70" id="3CV-um-lvG"/>
                             <constraint firstItem="qcN-Nk-Zjd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="6JP-dQ-4gy"/>
                             <constraint firstItem="qcN-Nk-Zjd" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="9H9-QB-Wiq"/>
                             <constraint firstItem="k0f-lP-Xlz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="BBd-yb-qA9"/>
                             <constraint firstItem="qcN-Nk-Zjd" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="G7s-4O-GI0"/>
-                            <constraint firstItem="417-2I-MoW" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="J4H-wu-EoK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="417-2I-MoW" secondAttribute="trailing" constant="80.5" id="KeC-qQ-Ccy"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="k0f-lP-Xlz" secondAttribute="trailing" constant="20" id="MwT-hp-b95"/>
                             <constraint firstItem="k0f-lP-Xlz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="ZRy-gp-brg"/>
                             <constraint firstItem="qcN-Nk-Zjd" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="cdE-BR-T6K"/>
@@ -63,19 +64,19 @@
             <objects>
                 <viewController id="jB4-9s-20W" customClass="profileVC" customModule="star_signs" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MSI-td-hSs">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <rect key="frame" x="0.0" y="0.0" width="712" height="1006.9200564096436"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="astrologyBG" translatesAutoresizingMaskIntoConstraints="NO" id="fFE-w5-cbo">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="universeBG" translatesAutoresizingMaskIntoConstraints="NO" id="fFE-w5-cbo">
+                                <rect key="frame" x="0.0" y="0.0" width="712" height="1007"/>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fRf-ow-uqz">
-                                <rect key="frame" x="30" y="200" width="315" height="35"/>
+                                <rect key="frame" x="30" y="200" width="652" height="35"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="next"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qgf-Qm-qtp" customClass="CustomButton" customModule="star_signs" customModuleProvider="target">
-                                <rect key="frame" x="20" y="580" width="335" height="47"/>
+                                <rect key="frame" x="20" y="940" width="672" height="47"/>
                                 <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="25"/>
                                 <state key="normal" title="Confirm">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -86,7 +87,7 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="DOB" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TCa-9r-ykS">
-                                <rect key="frame" x="30" y="255" width="315" height="35"/>
+                                <rect key="frame" x="30" y="255" width="652" height="35"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="next"/>
                             </textField>
@@ -127,41 +128,72 @@
             <objects>
                 <viewController id="cLY-lu-EQf" customClass="resultsVC" customModule="star_signs" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="y9Y-fl-9vf">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <rect key="frame" x="0.0" y="0.0" width="712" height="1006.9200564096436"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="zodiac" translatesAutoresizingMaskIntoConstraints="NO" id="M3j-r7-Yq2">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="universeBG" translatesAutoresizingMaskIntoConstraints="NO" id="M3j-r7-Yq2">
+                                <rect key="frame" x="0.0" y="0.0" width="712" height="1007"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Star Sign" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="21T-2S-noc">
-                                <rect key="frame" x="126.5" y="65" width="122.5" height="40"/>
-                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="29"/>
-                                <nil key="textColor"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="cJn-j6-9kq">
+                                <rect key="frame" x="74.5" y="65" width="562.5" height="210"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Horoscope:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="21T-2S-noc">
+                                        <rect key="frame" x="0.0" y="0.0" width="562.5" height="40"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="29"/>
+                                        <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="c6D-bR-cgs" customClass="CustomImage" customModule="star_signs" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="60" width="562.5" height="150"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="150" id="8Zm-bX-AdJ"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="210" id="Tc7-Bk-Gs3"/>
+                                </constraints>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(Mar 21-Apr 19)" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Za8-Ho-mD4">
+                                <rect key="frame" x="98" y="295" width="515" height="26.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="c6D-bR-cgs">
-                                <rect key="frame" x="66" y="175" width="243" height="231"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="acs-EJ-0zv">
+                                <rect key="frame" x="20" y="361.5" width="672" height="100"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="231" id="sXT-Yz-j4i"/>
+                                    <constraint firstAttribute="height" constant="100" id="n4j-lS-K6P"/>
                                 </constraints>
-                            </imageView>
+                                <string key="text">The pioneer and trailblazer of the horoscope wheel, Aries energy helps us initiate, fight for our beliefs and fearlessly put ourselves out there.</string>
+                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="c6D-bR-cgs" firstAttribute="leading" secondItem="rej-e0-pzR" secondAttribute="leading" constant="66" id="4rv-Xi-GxV"/>
-                            <constraint firstItem="rej-e0-pzR" firstAttribute="trailing" secondItem="c6D-bR-cgs" secondAttribute="trailing" constant="66" id="8zW-je-K3A"/>
+                            <constraint firstItem="acs-EJ-0zv" firstAttribute="centerX" secondItem="y9Y-fl-9vf" secondAttribute="centerX" id="2ns-A1-g8U"/>
+                            <constraint firstItem="acs-EJ-0zv" firstAttribute="top" secondItem="Za8-Ho-mD4" secondAttribute="bottom" constant="40" id="4me-Nv-kap"/>
+                            <constraint firstItem="rej-e0-pzR" firstAttribute="trailing" secondItem="Za8-Ho-mD4" secondAttribute="trailing" constant="99" id="5pZ-QI-aHL"/>
                             <constraint firstItem="M3j-r7-Yq2" firstAttribute="bottom" secondItem="rej-e0-pzR" secondAttribute="bottom" id="9vY-OZ-Lcd"/>
+                            <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="acs-EJ-0zv" secondAttribute="trailing" constant="20" id="C10-dG-k3d"/>
                             <constraint firstItem="M3j-r7-Yq2" firstAttribute="trailing" secondItem="rej-e0-pzR" secondAttribute="trailing" id="CEe-y9-ek8"/>
                             <constraint firstItem="M3j-r7-Yq2" firstAttribute="top" secondItem="rej-e0-pzR" secondAttribute="top" id="HWx-t5-LDJ"/>
-                            <constraint firstItem="c6D-bR-cgs" firstAttribute="top" secondItem="21T-2S-noc" secondAttribute="bottom" constant="70" id="LIX-fl-De7"/>
-                            <constraint firstItem="21T-2S-noc" firstAttribute="centerX" secondItem="y9Y-fl-9vf" secondAttribute="centerX" id="XB7-lT-HBD"/>
+                            <constraint firstItem="Za8-Ho-mD4" firstAttribute="top" secondItem="cJn-j6-9kq" secondAttribute="bottom" constant="20" id="J31-Ii-6pV"/>
+                            <constraint firstItem="acs-EJ-0zv" firstAttribute="leading" secondItem="y9Y-fl-9vf" secondAttribute="leading" constant="20" id="V7w-Hy-gw0"/>
+                            <constraint firstItem="Za8-Ho-mD4" firstAttribute="leading" secondItem="rej-e0-pzR" secondAttribute="leading" constant="98" id="epg-NM-n1A"/>
+                            <constraint firstItem="cJn-j6-9kq" firstAttribute="leading" secondItem="rej-e0-pzR" secondAttribute="leading" constant="74.5" id="exC-9B-xek"/>
                             <constraint firstItem="M3j-r7-Yq2" firstAttribute="leading" secondItem="rej-e0-pzR" secondAttribute="leading" id="iir-RS-hS3"/>
-                            <constraint firstItem="21T-2S-noc" firstAttribute="top" secondItem="rej-e0-pzR" secondAttribute="top" constant="65" id="qZU-2G-6Zh"/>
+                            <constraint firstItem="cJn-j6-9kq" firstAttribute="top" secondItem="rej-e0-pzR" secondAttribute="top" constant="65" id="mND-U7-XBP"/>
+                            <constraint firstItem="rej-e0-pzR" firstAttribute="trailing" secondItem="cJn-j6-9kq" secondAttribute="trailing" constant="75" id="qfx-Kj-rJM"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="rej-e0-pzR"/>
                     </view>
                     <navigationItem key="navigationItem" id="C3S-Tb-gBD"/>
                     <connections>
+                        <outlet property="dateRngLbl" destination="Za8-Ho-mD4" id="FKF-XL-w6d"/>
+                        <outlet property="starBioLbl" destination="acs-EJ-0zv" id="hBu-fW-SYX"/>
                         <outlet property="starSignImg" destination="c6D-bR-cgs" id="FRQ-RO-nOP"/>
                         <outlet property="starSignLbl" destination="21T-2S-noc" id="Edc-J3-0Gc"/>
                     </connections>
@@ -172,7 +204,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="astrologyBG" width="640" height="426.5"/>
-        <image name="zodiac" width="426.5" height="248"/>
+        <image name="universeBG" width="640" height="360"/>
     </resources>
 </document>
