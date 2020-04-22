@@ -38,10 +38,10 @@ class resultsVC: UIViewController {
          func checkStarSign() -> String{
         
   
-         let Dob = user.dOB  //get back a tupple
+         let Dob = user.dOB
             switch (Dob!) {
                 
-            case (21...31, 03), (01...19,04): //checking if it matches either the first statement or the second
+            case (21...31, 03), (01...19,04): //check the users date of birth is in range
                 return "Aries"  //March 21-April 19
                 
             case (20...30, 04), (01...20,05):
